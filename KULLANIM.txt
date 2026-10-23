@@ -1,0 +1,40 @@
+TAKLİT — FARE VE KLAVYE KAYDEDİCİ (Windows, taşınabilir)
+=========================================================
+
+KURULUM
+  Taklit.exe dosyasını istediğiniz klasöre kopyalayıp çift tıklayın. Kurulum gerekmez.
+  Ayarlar (taklit_ayar.json) ve son kayıt (son_kayit.taklit) exe'nin yanındaki klasöre yazılır;
+  bu yüzden exe'yi yazılabilir bir klasörde tutun (Masaüstü, D:\Araclar gibi; "Program Files" değil).
+
+KULLANIM
+  ● Kayıt (F9)   : Kaydı başlatır. Bundan sonra yaptığınız tıklamalar, tekerlek, tuşlar ve
+                   (seçiliyse) fare hareketleri zamanlarıyla birlikte kaydedilir.
+  ■ Durdur (F10) : Kaydı bitirir ya da oynatmayı durdurur.
+  ▶ Oynat (F11)  : Son kaydı aynı zamanlamayla tekrarlar.
+  Esc            : Oynatma sırasında klavyeden basılan Esc de oynatmayı durdurur.
+
+  Tekrar sayısı              : Kaydın kaç kez oynatılacağı.
+  Durdurana kadar sürekli    : F10/Esc'ye basılana kadar tekrarlar.
+  Hız                        : 0.25x ... 10x (1x = kaydedildiği hızda).
+  Tekrar arası (sn)          : İki tekrar arasında beklenecek süre.
+  Fare hareketlerini kaydet  : Kapalıysa yalnızca tıklama konumları kaydedilir (daha kısa, daha hızlı).
+  Pencere hep üstte          : Taklit penceresi diğer pencerelerin üstünde kalır.
+  Aç… / Farklı kaydet…       : Kayıtları .taklit dosyası olarak saklayıp sonra yeniden açabilirsiniz.
+
+  Taklit penceresinin kendisine yapılan tıklamalar (Durdur düğmesi vb.) ve F9/F10/F11 kayda girmez.
+
+İPUÇLARI
+  - Kayıt hangi ekran çözünürlüğü/ölçeklemeyle yapıldıysa oynatma da öyle yapılmalıdır; aksi
+    hâlde tıklamalar kayar (program bu durumda uyarı verir).
+  - Pencerelerin yeri ve açık programlar kayıttaki gibi olmalıdır; Taklit ekrana bakmaz,
+    yalnızca kaydedilen koordinatlara tıklar.
+  - Yönetici olarak çalışan bir programa (ör. bazı kurumsal uygulamalar) tıklama/tuş göndermek için
+    Taklit.exe'yi de "Yönetici olarak çalıştır" ile açın; Windows aksi hâlde girdiyi engeller.
+  - İmzasız bir program olduğu için ilk açılışta Windows SmartScreen "Windows bilgisayarınızı korudu"
+    diyebilir: "Ek bilgi" → "Yine de çalıştır". Klavye kancası kullandığı için bazı antivirüsler
+    şüpheli olarak işaretleyebilir.
+
+GELİŞTİRİCİ
+  Kaynak: Go (cgo yok). Linux'ta derleme:  ./derle.sh   → Taklit.exe
+  Dosyalar: main.go (pencere), record.go (kayıt kancaları), play.go (SendInput ile oynatma),
+            macro.go (.taklit JSON biçimi, ayarlar), win32.go (Windows API tanımları).

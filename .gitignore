@@ -1,0 +1,8 @@
+# derleme çıktıları (exe GitHub Releases'e yüklenir)
+*.exe
+*.syso
+# kullanıcıya özel dosyalar
+taklit_ayar.json
+son_kayit.taklit
+*.taklit
+*.tmp
