@@ -1,5 +1,4 @@
-# derleme çıktıları (exe GitHub Releases'e yüklenir)
-*.exe
+# derleme ara dosyası (derle.sh yeniden üretir)
 *.syso
 # kullanıcıya özel dosyalar
 taklit_ayar.json

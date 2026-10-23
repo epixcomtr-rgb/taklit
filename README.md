@@ -4,7 +4,7 @@
 
 Tek bir `Taklit.exe` dosyası. Kurulum yok, .NET/çalışma zamanı gerekmez. Tekrarlayan tıklama ve klavye işlerini bir kez kaydedin, istediğiniz kadar tekrarlatın.
 
-> **İndir:** [Releases](../../releases/latest) sayfasından `Taklit.exe`
+> **İndir:** Depodaki [`Taklit.exe`](Taklit.exe) dosyası (ya da [Releases](../../releases/latest) sayfası)
 
 ## Özellikler
 
